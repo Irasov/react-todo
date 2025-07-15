@@ -11,12 +11,21 @@ export default function TodoList(props) {
                 {!item.done && item.title}
               </td>
               <td>
-                <button className="button is-success" title="Complete" disabled="item.done">
+                <button
+                  className="button is-success"
+                  title="Complete"
+                  disabled="item.done"
+                  onClick={() => {
+                    props.setDone(item.key);
+                  }}>
                   &#9745;
                 </button>
               </td>
               <td>
-                <button className="button is-danger" title="Delete">
+                <button
+                  className="button is-danger"
+                  title="Delete"
+                  onClick={() => props.del(item.key)}>
                   &#97456;
                 </button>
               </td>
