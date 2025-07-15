@@ -14,7 +14,7 @@ export default function TodoList(props) {
                 <button
                   className="button is-success"
                   title="Complete"
-                  disabled="item.done"
+                  disabled={item.done}
                   onClick={() => {
                     props.setDone(item.key);
                   }}>
